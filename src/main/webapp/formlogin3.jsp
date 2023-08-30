@@ -399,6 +399,7 @@ input{
 
 </style>
 </head>
+
 <body>
 	<% String risultato = request.getAttribute("risultato")==null? null :(String)request.getAttribute("risultato");
 	if (risultato != null) {%>

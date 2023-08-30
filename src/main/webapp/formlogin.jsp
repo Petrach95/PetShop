@@ -395,10 +395,11 @@ input{
 }
 </style>
 </head>
-<body>
+<body >
 	<% String risultato = request.getAttribute("risultato")==null? null :(String)request.getAttribute("risultato");
 	if (risultato != null) {%>
-		<div id="messaggio"><%= risultato %></div>
+		<a onload="Popup()"></a>
+		<%-- <div id="messaggio" ><%= risultato %></div> --%>
 	<%}%>
 	<div class="cotn_principal">
 		<div class="cont_centrar">
@@ -477,6 +478,9 @@ input{
 		---------------------------------------
 		 */
 
+		 
+		 
+		 
 		const time_to_show_login = 400;
 		const time_to_hidden_login = 200;
 

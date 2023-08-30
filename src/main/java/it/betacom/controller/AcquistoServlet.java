@@ -1,6 +1,7 @@
 package it.betacom.controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -39,6 +40,7 @@ public class AcquistoServlet extends HttpServlet {
 			AnimaleDao animaleDao = new AnimaleDao();
 			Animale animale =  animaleDao.findAnimaleById(Integer.parseInt(request.getParameter("idAnimale")));
 			animale.setCliente(utente.getCliente());
+			animale.setDataA(LocalDate.now());
 			animaleDao.update(animale);
 			requestDispatcher = request.getRequestDispatcher("HomePage?p=C");
 		} else {

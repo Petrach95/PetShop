@@ -400,11 +400,10 @@ input{
 
 </style>
 </head>
-<body>
-	<% String risultato = request.getAttribute("risultato")==null? null :(String)request.getAttribute("risultato");
-	if (risultato != null) {%>
-		<div id="messaggio"><%= risultato %></div>
-	<%}%>
+<body onload=" <% String risultato = request.getAttribute("risultato")==null? null :(String)request.getAttribute("risultato"); 
+			if (risultato != null) out.println("Popup2('"+risultato+"')"); %> ">
+		
+	
 	<div class="cotn_principal">
 		<div class="cont_centrar">
 			<div class="cont_login">
@@ -514,6 +513,17 @@ input{
 		---------------------------------------
 		 */
 
+		 function Popup()
+		 {
+			 let str = "<%= risultato %>";
+		 	window.alert(str);
+		 }
+		 
+		 function Popup2(ris)
+		 {
+		 	window.alert(ris);
+		 }
+		 
 		const time_to_show_login = 400;
 		const time_to_hidden_login = 200;
 
